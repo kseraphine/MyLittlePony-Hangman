@@ -1,0 +1,20 @@
+This is my pseudocode
+
+We need some variables:
+var userGuess; THE LETTER THE USER GUESSED
+var numWins; number of wins to display on page
+var guessesLeft; number of guesses remaining, display on page
+var wrongLetter = []; array of wrong guesses because we have to display it and number of guesses shouldnt go down if user gueses same letter twice
+
+var rightLetter = []; array because we have to display the correct guesses or we could append to the previous w
+var word = {
+	firstword: [f', 'i', 'r', 's', 't'],
+	secondword: ['s', 'e', 'c', 'o', 'n', 'd'],
+	}
+
+alert = you've already guessed that!
+
+document.onkeyup = function(event){
+ var letter =
+
+array.prototype.forEach
