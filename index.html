@@ -1,1 +1,47 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UFT-8">
+    <title>Pony Hangman</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lakki+Reddy|Lato" rel="stylesheet">
+
+  </head>
+  <body>
+    <header>
+      <h1>My LiTTLE Pony...<br>Hangman</h1>
+    </header>
+    <div class="sticky">
+      <div class="maincontent">
+        <h2 class="start">Select a letter to get started</h2><br>
+        <div class="currentWord">
+          <h3>Current Word</h3>
+          <div id="wordLine"></div>
+        </div>
+        <div class="lettersGuessed">
+          <p>Letters Guessed:
+            <div id="guessedLine"></div>
+          </P>
+        </div>
+        <div class="guessCount">
+          <div id="remainingLine"></div>
+          <p>Guesses Remaining:
+          </p>
+        </div>
+        <div class="wins">
+          <p>Wins</p>
+        </div>
+        <div class="losses">
+          <p>Losses</p>
+        </div>
+      </div>
+      <img id="footerImg" src="assets/images/blue-rainbow-pony2.png" alt="Blue Pony"/>
+    </div>
+
+    <footer>
+      <p>&copy; Copyright 2016 Kelana Latimer</p>
+    </footer>
+    <script src="assets/javascript/game.js" type="text/javascript"></script>
+  </body>
+</html>

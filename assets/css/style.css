@@ -1,0 +1,72 @@
+body {
+    background-image: url('../images/dark_wall.png');
+    font-family: 'Lato', sans-serif;
+  color: purple;
+}
+header {
+  background-image: url('../images/tiny-rainbow-pony.png');
+  background-size: contain;
+  background-position: 30% 1%;
+  background-repeat: no-repeat;
+}
+h1 {
+  padding: 3%;
+  font-family: 'Lakki Reddy', cursive;
+  font-weight: bold;
+  /*outline: #FFF solid thin;*/
+  text-align: center;
+  font-size: 3em;
+  color: fuchsia;
+  box-sizing: border-box;
+}
+footer {
+  text-align: center;
+  color: fuchsia;
+  clear: both;
+}
+.maincontent {
+  background-color: peachpuff;
+  border: 5px solid fuchsia;
+  text-align: center;
+  width: 50%;
+  min-height: 100px;
+  padding: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+  box-sizing: border-box;
+}
+.currentWord, .lettersGuessed, .guessCount {
+  padding: 1% 1% 2% 1%;
+}
+.sticky {
+  flex: 1;
+}
+
+.wins {
+  float: left;
+  margin-left: 35%;
+}
+.losses {
+  float: right;
+  margin-right: 35%;
+}
+.wins, .losses {
+  /*border: 1px solid gray;*/
+  text-align: center;
+  width: 10%;
+  min-height: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.letterstyle {
+  border-bottom: thick solid fuchsia;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-right: 3px;
+}
+#footerImg {
+  float: right;
+  margin-right: 30%;
+}
