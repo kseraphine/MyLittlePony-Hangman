@@ -1,11 +1,10 @@
 
-var start;
-
+var start; //May not be needed
 var wins;
-var losses;
+var losses = 1;
 var maxGuesses = 6
 var wrongLetter = [];
-var counter = 0;
+//var counter = 0; //Not sure if needed anymore
 var words = ["mane", "tail", "cute", "little", "short", "carrots", "neigh", "adorable", "brony"];
 var currentWord = words[Math.floor(Math.random() * words.length)];
 console.log(currentWord, currentWord.length);
@@ -13,9 +12,8 @@ console.log(currentWord, currentWord.length);
 var letterLineElement = document.getElementById("wordLine");
 var lettersGuessedElement = document.getElementById("guessedLine");
 var remainingLineElement = document.getElementById("remainingLine");
-//console.log("1" + letterLine);
-//};
-console.log("Begin for loop for empty spaces")
+var lossLineElement = document.getElementById("lossLine");
+
 for (var i = 0; i < currentWord.length; i++) {
     var newDiv = document.createElement("div");
     newDiv.classList.add("letterstyle");
@@ -24,25 +22,26 @@ for (var i = 0; i < currentWord.length; i++) {
 
 document.onkeypress = function(event){
   var currentGuess = event.key;
-  // todo: fail if not alphabetical character
+  console.log(currentGuess);
+  // TODO: fail if not alphabetical character
 
   var index=currentWord.indexOf(currentGuess);
-  if (index == -1)
-  {
-    // letter not found in currentword
-    console.log(letterLine.childNodes[index]); //this is the node to add the correct guess to
-    // add not found letter to fail div
-    lettersGuessedElement.innerHTML += currentGuess;
-
-    // display number of guesses remaining
-    remainingLineElement.innerHTML = (maxGuesses - wrongLetter.length);
+  if (index == -1) {
+    lettersGuessedElement.innerHTML += currentGuess.toUpperCase();
+    if (wrongLetter.indexOf(currentGuess) > -1) {
+      alert("You've already guessed that letter.  Guess again.");
+    }else {
+      wrongLetter.push(currentGuess);
+      remainingLineElement.innerHTML = (maxGuesses - wrongLetter.length);
+    };
+    if (maxGuesses == wrongLetter.length) {
+      alert("You lost!");
+      lossLineElement.innerHTML = (losses++);
+      //TODO: restart the game
+    };
+  } else {
+    letterLineElement.childNodes[index].innerHTML = (currentGuess.toUpperCase());
   }
-  else {
-    // letter found!!
-  }
 
-
-  console.log(letterLine);
-
-  counter += 1;
+      //TODO: Show wins after word is spelled
 };
